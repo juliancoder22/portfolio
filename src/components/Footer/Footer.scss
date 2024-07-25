@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2.5rem 98px;
+  gap: 120px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #33333344;
+    padding-top: 40px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 80px;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+
+    &:hover {
+      color: rgba(140, 129, 230, 1);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      font-weight: 500;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+    }
+  }
+
+  &__icon {
+    color: rgba(51, 51, 51, 0.562);
+    transition: color 0.3s ease;
+    font-size: 1.8rem !important;
+
+    &:hover {
+      color: rgba(51, 51, 51, 0.8);
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 100px;
+  position: relative;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__pre {
+    font-size: 1.5em;
+    font-weight: 400;
+    position: relative;
+    padding-left: 7rem;
+    margin-left: 1.2em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1em;
+      top: 50%;
+      width: 5em;
+      height: 2px;
+      background-color: #000;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__name {
+    font-size: 6.25em;
+  }
+
+  &__skill-1,
+  &__skill-2 {
+    padding: 0.625em 1.25em;
+    background-color: rgba(220, 217, 247, 1);
+    font-size: 24px;
+    position: absolute;
+    transition: all 1s ease;
+    animation: fade-slide-animation 9s infinite;
+    text-align: center;
+  }
+
+  &__skill-1 {
+    top: 7em;
+    left: 0em;
+    z-index: 2;
+    animation-delay: 0s;
+  }
+
+  &__skill-2 {
+    top: 7em;
+    left: 0em;
+    z-index: 1;
+    opacity: 0.5;
+    animation-delay: 3.5s;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1em;
+    padding-top: 7em;
+  }
+
+  &__btn-contact {
+    padding: 0.5rem 1rem;
+    width: 12em;
+    border-radius: 3rem;
+    background-color: rgba(140, 129, 230, 1);
+    border: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 75%;
+    }
+  }
+
+  &__btn-work {
+    padding: 0.5rem 1rem;
+    width: 12em;
+    border-radius: 3rem;
+    border: 1px solid #000;
+    background: #000;
+    text-transform: capitalize;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  @keyframes fade-slide-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    25% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    75% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  img {
+    pointer-events: none;
+    width: 40%;
+  }
+}

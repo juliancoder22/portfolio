@@ -1,0 +1,95 @@
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+
+    &:hover {
+      color: rgba(140, 129, 230, 1);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1em;
+  }
+
+  &__btn-darkmode {
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    min-width: 10em;
+    cursor: pointer;
+  }
+
+  &__btn-black {
+    border-radius: 3rem;
+    background-color: #000;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #111;
+    outline: none;
+    min-width: 10em;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+
+    &:hover {
+      opacity: 75%;
+    }
+  }
+}
