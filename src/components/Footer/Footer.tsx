@@ -1,10 +1,21 @@
+import React, { useContext } from "react";
 import "./Footer.scss";
 import logoSvg from "../../assets/logo.svg";
 import { LinkedIn, Email, GitHub } from "@mui/icons-material";
+import { DarkModeContext } from "../../DarkModeContext";
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  // Usar el contexto de DarkMode
+  const context = useContext(DarkModeContext);
+
+  if (!context) {
+    throw new Error("DarkModeContext must be used within a DarkModeProvider");
+  }
+
+  const { darkMode } = context;
+
   return (
-    <footer className="footer">
+    <footer className={`footer ${darkMode ? "dark-mode" : ""}`}>
       <div className="footer__top">
         <img src={logoSvg} alt="Julian Aquino Logo" />
         <ul className="footer__links">

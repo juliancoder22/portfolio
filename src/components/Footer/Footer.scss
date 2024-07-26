@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
 .footer {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 2.5rem 98px;
   gap: 120px;
+  background-color: #fff; // Default background color
 
   &__top {
     display: flex;
@@ -20,7 +24,7 @@
 
   &__link {
     text-decoration: none;
-    color: #333;
+    color: #333; // Default link color
     font-weight: 500;
 
     &:hover {
@@ -35,6 +39,7 @@
 
     span {
       font-weight: 500;
+      color: #333; // Default text color
     }
 
     ul {
@@ -51,6 +56,46 @@
 
     &:hover {
       color: rgba(51, 51, 51, 0.8);
+    }
+  }
+
+  /* Dark mode styles */
+  &.dark-mode {
+    background-color: #1a1a1a; // Dark mode background color
+
+    .footer {
+      &__top {
+        border-top: 1px solid #333;
+      }
+
+      &__link {
+        color: #fff; // Dark mode link color
+
+        &:hover {
+          color: rgba(140, 129, 230, 1);
+        }
+      }
+
+      &__bottom {
+        span {
+          color: #ffffffd8; // Dark mode text color
+        }
+
+        ul {
+          li {
+            a {
+              .footer__icon {
+                color: #ffffffd8;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  color: rgba(140, 129, 230, 1);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
