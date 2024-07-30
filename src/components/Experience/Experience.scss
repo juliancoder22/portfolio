@@ -1,0 +1,116 @@
+.experience {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f6f6f6;
+  position: relative;
+
+  &__title {
+    padding: 0.8rem 1.4rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+    position: absolute;
+    top: 3rem;
+    left: 47%;
+  }
+
+  &__anthos,
+  &__madcave {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      height: 100vh;
+      gap: 2rem;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  &__img-container {
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__box-title {
+    color: rgba(140, 129, 230, 1);
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+  }
+
+  &__text {
+    width: 100%;
+    color: rgba(106, 106, 106, 1);
+  }
+
+  &__bar-container {
+    position: absolute;
+    top: 22em;
+    left: 50%;
+    width: 4px;
+    height: 65%;
+    background-color: #e0e0e0;
+    transform: translateX(-50%);
+  }
+
+  &__bar {
+    width: 100%;
+    background-color: rgba(140, 129, 230, 0);
+    transition: height 0.8s ease-out, background-color 0.8s ease-out;
+  }
+
+  &__date {
+    position: absolute;
+    font-size: 14px;
+    color: #666;
+  }
+
+  &__date--start {
+    top: 0;
+    right: -5rem;
+    transform: translateY(-50%);
+  }
+
+  &__date--end {
+    top: 100%;
+    left: -5rem;
+    transform: translateY(-50%);
+  }
+
+  &__circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(140, 129, 230, 1);
+  }
+
+  &__circle--start {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__circle--end {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
