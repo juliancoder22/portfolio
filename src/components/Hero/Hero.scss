@@ -132,3 +132,42 @@
     width: 40%;
   }
 }
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1rem;
+
+    &__content {
+      gap: 2rem;
+      position: absolute;
+    }
+
+    &__pre {
+      font-size: 16px;
+      padding-left: 5rem;
+    }
+
+    &__name {
+      font-size: 34px;
+    }
+
+    &__skill-1,
+    &__skill-2 {
+      font-size: 16px;
+    }
+
+    &__buttons {
+      padding-top: 18rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 90vw;
+    }
+
+    img {
+      position: absolute;
+      right: 1rem;
+    }
+  }
+}
