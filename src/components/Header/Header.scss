@@ -73,6 +73,13 @@
     outline: none;
     min-width: 10em;
     cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(140, 129, 230, 1);
+  }
+
+  &__icon {
+    font-size: 1rem !important;
+    color: #ffffffe3;
   }
 
   &__btn-black {
@@ -81,7 +88,7 @@
     padding: 0.5rem 1rem;
     color: #fff;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     border: 1px solid #111;
     outline: none;
     min-width: 10em;
@@ -90,6 +97,25 @@
 
     &:hover {
       opacity: 75%;
+    }
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  .header {
+    background-color: #1a1a1a;
+    transition: 1s all ease-in-out;
+    &__link {
+      color: #fff;
+
+      &:hover {
+        color: rgba(140, 129, 230, 1);
+      }
+    }
+
+    &__btn-black {
+      background: #333;
     }
   }
 }

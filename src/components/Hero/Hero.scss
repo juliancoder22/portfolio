@@ -7,6 +7,25 @@
   box-sizing: border-box;
 }
 
+@keyframes fade-slide-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -14,6 +33,7 @@
   min-height: 100vh;
   padding: 100px;
   position: relative;
+  transition: all 0.3s ease;
 
   &__content {
     position: relative;
@@ -28,6 +48,7 @@
     position: relative;
     padding-left: 7rem;
     margin-left: 1.2em;
+    color: #000;
 
     &::before {
       content: "";
@@ -44,6 +65,7 @@
 
   &__name {
     font-size: 6.25em;
+    color: #000;
   }
 
   &__skill-1,
@@ -55,6 +77,7 @@
     transition: all 1s ease;
     animation: fade-slide-animation 9s infinite;
     text-align: center;
+    color: #000;
   }
 
   &__skill-1 {
@@ -100,35 +123,47 @@
     padding: 0.5rem 1rem;
     width: 12em;
     border-radius: 3rem;
-    border: 1px solid #000;
-    background: #000;
     text-transform: capitalize;
+    background-color: #1a1a1a;
+    border: 1px solid #111;
+    border: none;
     font-size: 16px;
     cursor: pointer;
     color: #fff;
-  }
-
-  @keyframes fade-slide-animation {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    25% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    75% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(100%);
+    &:hover {
+      opacity: 75%;
     }
   }
 
   img {
     pointer-events: none;
     width: 40%;
+  }
+
+  /* Dark mode styles */
+  &.dark-mode {
+    background-color: #1a1a1a;
+
+    .hero__pre {
+      color: #fff;
+      z-index: 1;
+      &::before {
+        background-color: #fff;
+      }
+    }
+
+    .hero__name {
+      color: #fff;
+    }
+
+    .hero__skill-1,
+    .hero__skill-2 {
+      background-color: rgb(131, 114, 255);
+      color: #fff;
+    }
+
+    .hero__btn-work {
+      background: #333;
+    }
   }
 }
